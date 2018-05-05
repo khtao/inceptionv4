@@ -41,7 +41,7 @@ class PathologyDataset(dataset.Dataset):
             image_path = self.neg_list[idx]
             label = np.array(0).reshape([1, 1])
         else:
-            image_path = self.pos_list[idx-len(self.pos_list)]
+            image_path = self.pos_list[idx-len(self.neg_list)]
             label = np.array(1).reshape([1, 1])
 
         input_image = utils.LoadImage()(image_path)
