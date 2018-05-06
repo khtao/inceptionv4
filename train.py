@@ -19,7 +19,7 @@ def test_model(dataloader, model, test_num=3000):
         output = model(img)
         _, predicted = torch.max(output.data, dim=1)
         total += label.size(0)
-        correct += (predicted == label).sum()
+        correct += (predicted == label).sum().cpu().numpy()
     print('Accuracy of the network : %d %%' % (100 * correct / total))
     return correct / total
 
