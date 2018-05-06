@@ -19,3 +19,5 @@ pip install -r requirements.txt
 ```
 
 在**utils/config.py**中将**data_dir**改为自己数据集的路径
+
+在根目录新建文件夹checkpoints
